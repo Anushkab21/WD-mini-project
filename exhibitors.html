@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisan Expo</title>
+    <link rel="icon" type="images/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+ rel="stylesheet">
+ <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" 
+ integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous"> -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/LOGO2.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="exhibitors.html">EXHIBITORS</a></li>
+                    <li><a href="">🌐EN/MR</a></li>
+                    <li><a href="admin.html">ADMIN</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Join as an Exhibitor</h1>
+    </section>
+    <section class="registration-form">
+        <form action="submit_registration.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+    
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your mobile number">
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </div>
+    
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required placeholder="Enter your full address"></textarea>
+            </div>
+    
+            <div class="form-group">
+                <label for="stall_type">Type of Stall:</label>
+                <select id="stall_type" name="stall_type" required>
+                    <option value="">--Select Stall Type--</option>
+                    <option value="Machinery">Agriculture Machinery</option>
+                    <option value="Fertilizers">Fertilizers</option>
+                    <option value="Seeds">Seeds</option>
+                    <option value="Irrigation">Irrigation Equipment</option>
+                    <option value="Organic">Organic Farming Products</option>
+                    <option value="Other">Mahila Udyogini</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="stall_size">Stall Size Required:</label>
+                <select id="stall_size" name="stall_size" required>
+                    <option value="">--Select Stall Size--</option>
+                    <option value="6x6">6x6 feet</option>
+                    <option value="8x8">8x8 feet</option>
+                    <option value="10x10">10x10 feet</option>
+                    <option value="12x12">12x12 feet</option>
+                    <option value="custom">Other (Specify in Special Requirements)</option>
+                </select>
+            </div>
+            
+    
+            <div class="form-group">
+                <label for="requirements">Special Requirements (if any):</label>
+                <textarea id="requirements" name="requirements" placeholder="Any specific need?"></textarea>
+            </div>
+    
+            <button type="submit" class="hero-btn grn-btn">Submit Registration</button>
+        </form>
+    </section>
+
+    <!----javascript for toggle menu----->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right ="0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right ="-200px";
+        }
+    </script>
+</body>
+</html>
